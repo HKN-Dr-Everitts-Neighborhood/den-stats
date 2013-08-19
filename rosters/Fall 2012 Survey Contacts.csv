@@ -1,0 +1,64 @@
+Email Responses?,Survey Responses?,Number of students in class,Subj,ClassNum,CrossList,"ClassTitle (I don't plan to use this, but it was easy to just copy-paste everything",ProfEmails,Greeting,SurveyId,ContributorsPlug,Notes,Response Rate
+,,,EX,101,EX 101,Example,"davideogameman+test1@gmail.com, davideogameman+test2@gmail.com",Dear Professors me and you,0,"Additionally, would you mind asking your class if anyone would be willing to write about it for Dr. Everitt’s Neighborhood?  Anyone who is interested in helping should contact David Goldstein (goldste6@illinois.edu).
+",,
+yes,80,375,CS,225,CS 225,Data Structures,c-heeren@illinois.edu,Dear Professor Heeren,8978595,,,0.213333333333333
+yes,27,347,ECE,110,ECE 110,Intro Elec & Computer Engrg,"lgoddard@illinois.edu, ttrick@illinois.edu",Dear Professors Goddard and Trick,6066853,,,0.077809798270893
+yes,36,298,ECE,190,ECE 190,Intro to Computing Systems,"yihchun@illinois.edu, kindrtnk@illinois.edu",Dear Professors Hu and Kindratenko,3590489,,,0.120805369127517
+yes,27,285,ECE,210,ECE 210,Analog Signal Processing,"tangul@illinois.edu, alvarez@illinois.edu, jmakela@illinois.edu, wdo@illinois.edu","Dear Professors Basar, Makela, Alvarez, and O'Brien",6376991,,,0.094736842105263
+,0,208,ECE,290,ECE 290,Computer Engineering I,"kalbarcz@illinois.edu, glherman@illinois.edu",Dear Professors Kalbarczyk and Herman,6836259,,,0
+,0,28,ECE,304,ECE 304,Photonic Devices,choquett@illinois.edu,Dear Professor Choquette,408147,"Additionally, would you mind asking your class if anyone would be willing to write about it for Dr. Everitt’s Neighborhood?  Anyone who is interested in helping should contact David Goldstein (goldste6@illinois.edu).",,0
+,0,121,ECE,310,ECE 310,Digital Signal Processing,"ybresler@illinois.edu, z-liang@illinois.edu",Dear Professors Bresler and Liang,4113158,,,0
+,0,63,ECE,311,ECE 311,Digital Signal Processing Lab,"ybresler@illinois.edu, z-liang@illinois.edu",Dear Professors Bresler and Liang,9986247,,,0
+yes,14,186,ECE,313,ECE 313,Probability with Engrg Applic,"alvarez@illinois.edu, vvv@illinois.edu, farzadk@illinois.edu, b-hajek@illinois.edu","Dear Professors Alvarez, Veeravalli, Kamalabadi, and Hajek",7933865,,,0.075268817204301
+yes,6,27,ECE,316,ECE 316,Ethics and Engineering,hillmer@illinois.edu,Dear Professor Hillmer,408147,"Additionally, would you mind asking your class if anyone would be willing to write about it for Dr. Everitt’s Neighborhood?  Anyone who is interested in helping should contact David Goldstein (goldste6@illinois.edu).",,0.222222222222222
+,0,206,ECE,329,ECE 329,Fields and Waves I,"lwaldrop@illinois.edu, kevinkim@illinois.edu, dwass@illinois.edu, heil@illinois.edu","Dear Professors Waldrop, Kim, Wasserman and Heil",4842346,,,0
+yes,20,155,ECE,330,ECE 330,Power Ckts & Electromechanics,"psauer@illinois.edu, cradhak@illinois.edu",Dear Professors Sauer and Radhakrishnan,2323737,,,0.129032258064516
+,0,109,ECE,333,ECE 333,Green Electric Energy,"overbye@illinois.edu,krogers6@illinois.edu",Dear Professors Overbye and Davis,6006990,,,0
+yes,17,239,ECE,340,ECE 340,Semiconductor Electronics,"matthewg@illinois.edu,mfeng@illinois.edu,epop@illinois.edu,jdallesa@illinois.edu","Dear Professors Gilbert, Feng, Pop, and Dallesasse",314425,,,0.071129707112971
+,0,103,ECE,342,ECE 342,Electronic Circuits,elyse@illinois.edu,Dear Professor Rosenbaum,375337,,,0
+,0,92,ECE,343,ECE 343,Electronic Circuits Laboratory,cradhak@illinois.edu,Dear Chandrasekhar,548551,"Additionally, would you mind asking your class if anyone would be willing to write about it for Dr. Everitt’s Neighborhood?  Anyone who is interested in helping should contact David Goldstein (goldste6@illinois.edu).",Is this going to be separate from the 342 survey?,0
+yes,10,70,ECE,350,ECE 350,Fields and Waves II,erhan@illinois.edu,Dear Professor Kudeki,122190,,,0.142857142857143
+,0,206,ECE,385,ECE 385,Digital Systems Laboratory,meng2@illinois.edu,Dear Huan-Ting,3798890,,,0
+,0,93,ECE,391,ECE 391,Computer Systems Engineering,nikita@illinois.edu,Dear Professor Borisov,5802009,,,0
+yes,2,15,ECE,395,ECE 395,Advanced Digital Projects Lab,L-Haken@illinois.edu,Dear Professor Haken,408147,,,0.133333333333333
+yes,6,42,ECE,402,ECE 402,Electronic Music Synthesis,L-Haken@illinois.edu,Dear Professor Haken,408147,,,0.142857142857143
+,0,32,ECE,408,CS483/ECE 408,Applied Parallel Programming,w-hwu@illinois.edu,Dear Professor Hwu,408147,,,0
+yes,4,67,ECE,411,ECE 411,Computer Organization & Design,rakeshk@illinois.edu,Dear Professor Rakesh,4074333,,,0.059701492537313
+yes,12,58,ECE,414,BIOE 414/ECE 414,Biomedical Instrumentation,klgentry@illinois.edu,Dear Professor Gentry,200146,,,0.206896551724138
+,0,48,ECE,415,BIOE 415/ECE 415,Biomedical Instrumentation Lab,klgentry@illinois.edu,Dear Professor Gentry,5983323,"Additionally, would you mind asking your class if anyone would be willing to write about it for Dr. Everitt’s Neighborhood?  Anyone who is interested in helping should contact David Goldstein (goldste6@illinois.edu).",Is this going to be separate from the 414 survey ?,0
+,1,36,ECE,420,ECE 420,Embedded DSP Laboratory,jontalle@illinois.edu,Dear Professor Allen,408147,,,0.027777777777778
+,0,168,ECE,422,CS 461/ECE 422,Computer Security I,shinrich@illinois.edu,Dear Professor Hinrichs,408147,"Additionally, would you mind asking your class if anyone would be willing to write about it for Dr. Everitt’s Neighborhood?  Anyone who is interested in helping should contact David Goldstein (goldste6@illinois.edu).",,0
+,0,27,ECE,425,ECE 425,Intro to VLSI System Design,mdfwong@illinois.edu,Dear Professor Wong,408147,,,0
+,0,48,ECE,428,CS 425/ECE 428,Distributed Systems,indy@illinois.edu,Dear Professor Gupta,408147,,,0
+,1,23,ECE,437,ECE 437,Sensors and Instrumentation,jmakela@illinois.edu,Dear Professor Makela,408147,,,0.043478260869565
+yes,2,65,ECE,438,CS 438/ECE 438,Communication Networks,nhv@illinois.edu,Dear Professor Vaidya,1177910,,,0.030769230769231
+,0,58,ECE,444,ECE 444,IC Device Theory & Fabrication,"jcoleman@illinois.edu,lyding@illinois.edu",Dear Professors Coleman and Lyding,7159563,,,0
+,0,113,ECE,448,CS 440/ECE 448,Artificial Intelligence,slazebni@illinois.edu,Dear Professor Lazebnik,1177910,"Additionally, would you mind asking your class if anyone would be willing to write about it for Dr. Everitt’s Neighborhood?  Anyone who is interested in helping should contact David Goldstein (goldste6@illinois.edu).",,0
+,0,18,ECE,451,ECE 451,Adv Microwave Measurements,jesa@illinois.edu,Dear Professor Schutt-Aine,1177910,"Additionally, would you mind asking your class if anyone would be willing to write about it for Dr. Everitt’s Neighborhood?  Anyone who is interested in helping should contact David Goldstein (goldste6@illinois.edu).",,0
+,0,22,ECE,452,ECE 452,Electromagnetic Fields,cangella@illinois.edu,Dear Professor Cangellaris,1177910,,,0
+yes,1,23,ECE,453,ECE 453,Wireless Communication Systems,s-franke@illinois.edu,Dear Professor Franke,1177910,,,0.043478260869565
+CANCELLED THIS SEMESTER,0,0,ECE,454,ECE 454,Antennas,jbernhar@illinois.edu ,Dear Professor Bernhard,1177910,,not offered this semester?,#DIV/0!
+yes,4,37,ECE,455,ECE 455,Optical Electronics,jgeden@illinois.edu,Dear Professor Eden,1177910,,,0.108108108108108
+yes,4,22,ECE,459,ECE 459,Communications Systems,cdschmit@illinois.edu,Dear Professor Schmitz,1177910,,,0.181818181818182
+,0,12,ECE,460,ECE 460,Optical Imaging,gpopescu@illinois.edu,Dear Professor Popescu,1177910,"Additionally, would you mind asking your class if anyone would be willing to write about it for Dr. Everitt’s Neighborhood?  Anyone who is interested in helping should contact David Goldstein (goldste6@illinois.edu).",,0
+,0,46,ECE,462,ECE 462,Logic Design,shobhav@illinois.edu,Dear Professor Vasudevan,1177910,,,0
+yes,7,84,ECE,464,ECE 464,Power Electronics,pilawa@illinois.edu,Dear Professor Pilawa,4624931,,,0.083333333333333
+,0,4,ECE,465,ECE 465,Optical Communications Systems,p-dragic@illinois.edu,Dear Professor Dragic,7632103,"Additionally, would you mind asking your class if anyone would be willing to write about it for Dr. Everitt’s Neighborhood?  Anyone who is interested in helping should contact David Goldstein (goldste6@illinois.edu).",,0
+,0,2,ECE,466,ECE 466,Optical Communications Lab,p-dragic@illinois.edu,Dear Professor Dragic,7531352,"Additionally, would you mind asking your class if anyone would be willing to write about it for Dr. Everitt’s Neighborhood?  Anyone who is interested in helping should contact David Goldstein (goldste6@illinois.edu).",Is this going to be separate from the 465 survey ?,0
+,0,44,ECE,469,ECE 469,Power Electronics Laboratory,pilawa@illinois.edu,Dear Professor Pilawa,8950914,"Additionally, would you mind asking your class if anyone would be willing to write about it for Dr. Everitt’s Neighborhood?  Anyone who is interested in helping should contact David Goldstein (goldste6@illinois.edu).",,0
+,0,58,ECE,470,ECE 470,Introduction to Robotics,tbretl@illinois.edu,Dear Professor Bretl,6189759,"Additionally, would you mind asking your class if anyone would be willing to write about it for Dr. Everitt’s Neighborhood?  Anyone who is interested in helping should contact David Goldstein (goldste6@illinois.edu).",,0
+,0,24,ECE,473,ECE 473,Fund of Engrg Acoustics,oelze@illinois.edu,Dear Professor Oelze,6189759,"Additionally, would you mind asking your class if anyone would be willing to write about it for Dr. Everitt’s Neighborhood?  Anyone who is interested in helping should contact David Goldstein (goldste6@illinois.edu).",,0
+,5,67,ECE,476,ECE 476,Power System Analysis,aledan@illinois.edu,Dear Professor Dominguez-Garcia,6189759,"Additionally, would you mind asking your class if anyone would be willing to write about it for Dr. Everitt’s Neighborhood?  Anyone who is interested in helping should contact David Goldstein (goldste6@illinois.edu).",,0.074626865671642
+,0,31,ECE,482,ECE 482,Digital IC Design,shanbhag@illinois.edu,Dear Professor Shanbhag,6189759,,,0
+,0,25,ECE,485,ECE 485,MEMS Devices & Systems,loganliu@illinois.edu,Dear Professor Liu,6189759,"Additionally, would you mind asking your class if anyone would be willing to write about it for Dr. Everitt’s Neighborhood?  Anyone who is interested in helping should contact David Goldstein (goldste6@illinois.edu).",,0
+,0,38,ECE,486,ECE 486,Control Systems,liberzon@illinois.edu,Dear Professor Liberzon,196009,,,0
+,0,98,ECE,491,CS 450/MATH 450/CSE 401/ECE 491,Numerical Analysis,heath@illinois.edu,Dear Professor Heath,6189759,,,0
+,0,31,ECE,492,CS 420/CSE 402/ECE 492,Parallel Progrmg: Sci & Engrg,padua@illinois.edu,Dear Professor Padua,6189759,"Additionally, would you mind asking your class if anyone would be willing to write about it for Dr. Everitt’s Neighborhood?  Anyone who is interested in helping should contact David Goldstein (goldste6@illinois.edu).",,0
+,,,,,,,,,,,,
+Totals,286,4697,,,,,,,,,,
+Classes with responses,,2521,,,,,,,,,,
+Net Response Rate,0.060889929742389,,,,,,,,,,,
+Net Response Rate for classes with responses,0.113447044823483,,,,,,,,,,,
+Number of classes responding,21,,,,,,,,,,,
+"Number of classes surveyed (minus 1, for Antennaes)",52,,,,,,,,,,,
+Professor Response Rate,0.403846153846154,,,,,,,,,,,
