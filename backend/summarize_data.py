@@ -13,9 +13,12 @@ def summarize_one(survey):
         question_summary['prompt'] = q.question_text
         if q.options: # this covers single-choice and multi-choice
             # TODO: output options that weren't chosen.
-            question_summary['answers'] = Counter(
-                ans for r_num, ans, other in q.answers
-            )
+
+            counts = Counter(ans for r_num, ans, other in q.answers)
+            question_summary['answers'] = [
+                (opt, counts[opt]) for opt in q.options
+            ]
+
             if q.other_is_enabled():
                 question_summary['others'] = [
                     other for r_num, ans, other in q.answers if other

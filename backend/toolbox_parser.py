@@ -74,12 +74,12 @@ def toolbox_parser(folder, files, attach_survey_info, tech_electives_hack=False)
                 question_el = question_table.find('th', {'class': 'summary-column-1'})
                 q.set_type('freeform')
             else:
-                options = set()
+                options = []
                 for answer_div in question_table.find_all(
                     'div',
                     {'class': 'detail-choices'}
                 ):
-                    options.add(answer_div.contents[0])
+                    options.append(answer_div.contents[0])
                 q.set_options(options)
 
                 if len(q_info) != 1:

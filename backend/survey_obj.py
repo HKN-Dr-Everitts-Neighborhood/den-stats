@@ -36,6 +36,7 @@ class Question(object):
 
     def set_options(self, options):
         assert self.type != "freeform"
+        assert isinstance(options, list)
         self.options = options
 
     def add_answer(self, response_num, answer, other=None):
