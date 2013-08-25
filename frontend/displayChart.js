@@ -9,7 +9,27 @@ var CanvasChart = function (canvasElem) {
 	this.chart = new Chart(canvasElem.getContext("2d"));
 };
 
-CanvasChart.prototype.displayData = function (data, opts) {
+CanvasChart.prototype.displayData = function (data) {
+  var steps=10;
+  var max;
+  for (var i=0; i < data.datasets.length; i++)
+  {
+    var dataset_data = data.datasets[i].data;
+    for (var j=0; j < dataset_data.length; j++)
+    {
+      if (max === undefined)
+        max = dataset_data[i];
+      else
+        max = Math.max(dataset_data[i], max);
+    }
+  }
+
+  opts = {
+    scaleOverride: true,
+    scaleSteps: steps,
+    scaleStepWidth: Math.ceil(max/steps),
+    scaleStartValue: 0
+  };
 	this.chart.Bar(data, opts);
 };
 
