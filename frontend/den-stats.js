@@ -4,7 +4,14 @@ var initFunc = function ()
 };
 
 function loadSemesterJson(semester_data) {
+  var courses_array = [];
 	for(course in semester_data) {
+    courses_array.push(course);
+  }
+  courses_array.sort();
+
+  for (var i = 0; i < courses_array.length; i++) {
+    var course = courses_array[i];
 		$("#chartSelect").append(new Option(course, course));
 	}
 	
