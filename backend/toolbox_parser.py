@@ -154,10 +154,16 @@ def toolbox_parser(folder, files, attach_survey_info, tech_electives_hack=False)
             # now transfer all answers
             for i, q in enumerate(survey.questions[1:]):
                 for rnum, answer, other in q.answers:
-                    new_q = rnum_to_subsurvey[rnum].get_question(i)
+                    sub_survey = rnum_to_subsurvey[rnum]
+
                     # sanity check
+                    new_q = sub_survey.get_question(i)
                     assert q.question_text == new_q.question_text
-                    new_q.add_answer(rnum, answer, other)
+
+                    # add answer.  Can't call add_answer() on new_q
+                    # since that won't increment the survey's num_answers.
+                    sub_survey.add_answer(rnum, i, answer, other)
+                    
 
             for class_name in sub_surveys_by_class:
                 title = title_to_filename_chars(

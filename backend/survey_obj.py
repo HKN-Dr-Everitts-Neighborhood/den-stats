@@ -77,6 +77,8 @@ class Survey(object):
     def add_question(self, q_obj):
         assert isinstance(q_obj, Question), "q_obj has the wrong type!"
         self.questions.append(q_obj)
+        self.num_answers += len(q_obj.answers)
+
         return len(self.questions)-1
 
     def get_question(self, num):
