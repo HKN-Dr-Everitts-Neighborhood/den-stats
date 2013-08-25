@@ -18,9 +18,9 @@ CanvasChart.prototype.displayData = function (data) {
     for (var j=0; j < dataset_data.length; j++)
     {
       if (max === undefined)
-        max = dataset_data[i];
+        max = dataset_data[j];
       else
-        max = Math.max(dataset_data[i], max);
+        max = Math.max(dataset_data[j], max);
     }
   }
 
