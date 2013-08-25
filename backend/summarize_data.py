@@ -1,4 +1,5 @@
 from collections import Counter
+from random import shuffle
 
 def summarize(surveys):
     
@@ -22,13 +23,18 @@ def summarize_one(survey):
             ]
 
             if q.other_is_enabled():
-                question_summary['others'] = [
+                others = [
                     other for r_num, ans, other in q.answers if other
                 ]
+                # shuffle for anonymization
+                shuffle(others)
+                question_summary['others'] = others
         else: # this covers freeform questions
-            question_summary['answers'] = [
-                ans for r_num, ans, other in q.answers if ans
-            ]
+            answers = [ ans for r_num, ans, other in q.answers if ans ]
+            # shuffle for anonymization
+            shuffle(answers)
+            question_summary['answers'] = answers
+
         summary.append(question_summary)
 
     return summary
