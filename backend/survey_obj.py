@@ -71,6 +71,7 @@ class Survey(object):
 
     def __init__(self):
         self.questions = []
+        self.num_answers = 0
 
     # Note: questions must be added in order!
     def add_question(self, q_obj):
@@ -82,11 +83,15 @@ class Survey(object):
         return self.questions[num]
 
     def add_answer(self, respondent_num, question_num, answer, other=None):
+        self.num_answers += 1
         self.questions[question_num].add_answer(
             respondent_num,
             answer,
             other
         )
+
+    def has_answers(self):
+        return self.num_answers > 0
 
     def set_info(self, course_name, course_title, crosslist, section=None):
         '''

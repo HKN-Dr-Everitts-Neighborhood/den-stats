@@ -2,8 +2,10 @@ from collections import Counter
 
 def summarize(surveys):
     
+    # this excludes surveys with no responses.
     return dict(
-        ((survey._course_name, summarize_one(survey)) for survey in surveys)
+        ((survey._course_name, summarize_one(survey))
+         for survey in surveys if survey.has_answers())
     )
 
 def summarize_one(survey):
