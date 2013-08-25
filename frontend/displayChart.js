@@ -1,48 +1,23 @@
-
-// TODO: shouldn't be hardcoded.
-var chartNames = ["cs225", "ece110"];
-
 var chartCanvases = {};
 var whiteRGB = "#000000";
 
 var cWidth = 400;
-var cHeight = 400;
+var cHeight = 300;
 
-function CanvasChart(canvasElem) {
+var CanvasChart = function (canvasElem) {
 	this.canvas = canvasElem;
 	this.chart = new Chart(canvasElem.getContext("2d"));
-}
+};
 
 CanvasChart.prototype.displayData = function (data, opts) {
 	this.chart.Bar(data, opts);
-}
+};
 
-$(document).ready(readyFunc) ;
-
-function readyFunc() {
-	populateChartSelect();
-
-	var chartName = $("#chartSelect").val();
-	var chartAllData = genChartData(chartName);
-	spawnCanvas(chartName, chartAllData);
-
-	$("#chartSelect").change(
-		function () {
-			var newChartName = $("#chartSelect").val();
-			spawnCanvas(newChartName, genChartData(newChartName));
-		}
-		);
-}
-
-function populateChartSelect() {
-	for(var i = 0; i < chartNames.length; i++) {
-		$("#chartSelect").append(new Option(chartNames[i], chartNames[i]));
-	}
-}
 
 function spawnCanvas(chartName, chartData) {
 	console.log(chartName);
 	console.log(chartData);
+	
 	$("#canvasDiv").html('');
 	for(var i = 0; i < chartData.length; i++) {
 		var newCanvas = document.createElement('canvas');
