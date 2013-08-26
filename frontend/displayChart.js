@@ -54,10 +54,7 @@ CanvasChart.prototype.displayData = function (data) {
 };
 
 // This function is ill-named.  Though it does create canvases, it also handles others and freeform answers.
-function spawnCanvas(chartName, chartData) {
-  console.log(chartName);
-  console.log(chartData);
-  
+function spawnCanvas(chartName, chartData) {  
   $("#canvasDiv").html('');
   for(var i = 0; i < chartData.length; i++) {
 
@@ -102,6 +99,11 @@ function spawnCanvas(chartName, chartData) {
 
         var new_p = document.createElement("p");
         new_p.innerText = r;
+        newDiv.appendChild(new_p);
+      }
+      if (raw_responses.length === 0) {
+        var new_p = document.createElement("p");
+        new_p.innerText = "No responses to display.";
         newDiv.appendChild(new_p);
       }
     }
