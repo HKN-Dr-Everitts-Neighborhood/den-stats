@@ -1,5 +1,10 @@
 // This list is used to populate the semesters dropdown.
 var semesters = ["Spring 2013", "Fall 2012"];
+var data_location;
+if (is_dev)
+  data_location ="/";
+else
+  data_location = "/download/attachments/227740932/"; //retarget for development
 
 var initFunc = function ()
 {
@@ -14,7 +19,7 @@ var initFunc = function ()
 var semesterSelectionChanged = function() {
   var new_semester = $("#semester_select").val();
   if (new_semester) { // weed out "select a semester" option
-    $.getJSON(new_semester + '.json', loadSemesterJson);
+    $.getJSON(data_location + new_semester + '.json', loadSemesterJson);
   }
 };
 
