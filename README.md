@@ -6,14 +6,14 @@ A site to display results for DEN.
 Design Goals
 =============
 
-* Isolate all semester-specific / special case logic from the main parts of the code.
+* Isolate all semester-specific / special case logic from the main parts of the code.  I.e. we want to translate all the data to some common format that isn't semester-specific.
 * Make sure that single-user responses aren't visible in the front end.  I.e. we're publishing aggregated data, and don't want to make the whole data set public - at least, not intentionally.  We may want to provide breakdowns by demographic categories - i.e. graphing freshmen/sophomore/junior/senior separately.
-* The front end should be agnostic to questions and pecularities of each semester's surveys - it should display what it's given, nothing more, nothing less.
+* The front end should be agnostic to questions and pecularities of each semester's surveys - it should display what it's given.  The idea is for the frontend to be a fairly generic graphing platform, only really coupled to the format of the json it is given to graph.
 
 Data Flow
 ===========
 
-Each semester will be downloaded to the proper folder in raw_data.  When backend/preprocess.py is run,
+Each semester's data should be downloaded to the proper folder in raw_data.  When backend/preprocess.py is run,
 this data will then be translated to python objects (Surveys and Questions in backend/survey_obj.py) by
 semester and survey-platform specific code. From these intermediate python objects, the data is then
 summarized, forming the json files in the summarized_data folder.
@@ -41,4 +41,5 @@ python -m SimpleHTTPServer
 ```
 
 From within the frontend folder.  Copy the generated .json files from summarized_data
-into the frontend folder, and then open displayChart.html in a browser. 
+into the frontend folder, and then open displayChart.html in a browser (typically, as
+http://localhost:8000/displayChart.html)
