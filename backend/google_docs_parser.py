@@ -39,7 +39,7 @@ type_map = {
 options_map = {
     "What is your Major?": {
         '*': ["Electrical Engineering", "Computer Engineering", "Computer Science", Other],
-        'ECE 110': ["Electrical Engineering", "Computer Engineering", "Computer Science", "Industrial Engineering", "General Engineering", Other],
+        'ECE 110': ["Electrical Engineering", "Computer Engineering", "Computer Science", "Industrial Engineering", "General Engineering", Other], # This is a hack - Industrial / General were not choices in the original survey, but so many people wrote it in, I had to add it.
     },
     "What is your class standing based on the number of credit hours you have?": ["Freshman", "Sophomore", "Junior", "Senior", Other],
     "How many hours per week, on average, do you spend on work for this class (homework, reading, studying, etc.) outside of lecture?": ["0-3 hours", "4-7 hours", "8-11 hours", "12-15 hours", "16-19 hours", "20+ hours"],
