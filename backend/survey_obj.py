@@ -95,7 +95,7 @@ class Survey(object):
     def has_answers(self):
         return self.num_answers > 0
 
-    def set_info(self, course_name, course_title, crosslist, section=None):
+    def set_info(self, course_name, course_title=None, crosslist=None, section=None):
         '''
         Function to set meta-info about the class that the survey is for.
 
@@ -111,8 +111,10 @@ class Survey(object):
         '''
         
         assert isinstance(course_name, basestring) and course_name
-        assert isinstance(course_title, basestring) and course_title
-        assert isinstance(crosslist, list)
+        if course_title is not None:
+            assert isinstance(course_title, basestring) and course_title
+        if crosslist is not None:
+            assert isinstance(crosslist, list)
         if section is not None:
             assert isinstance(section, basestring) and section
 

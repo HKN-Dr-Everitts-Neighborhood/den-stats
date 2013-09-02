@@ -8,7 +8,7 @@ def summarize(surveys):
     
     # this excludes surveys with no responses.
     return dict(
-        ((survey._course_name + ' - ' + survey._course_title, summarize_one(survey))
+        ((survey._course_name + (' - ' + survey._course_title if survey._course_title else ''), summarize_one(survey))
          for survey in surveys if survey.has_answers())
     )
 
