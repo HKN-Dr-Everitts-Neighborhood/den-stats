@@ -10,7 +10,7 @@ from survey_obj import (
 
 def toolbox_parser(folder, files, attach_survey_info, tech_electives_hack=False):
     '''
-    Returns a dict mapping each class name (i.e. "ECE 110") to a Survey object.
+    Returns a list of Survey objects.
     '''
 
     # group together files with the same name but different extensions
@@ -284,7 +284,6 @@ def spring2013_correction(input):
 
 def minusA(letter):
     return ord(letter) - ord('A')
-
 
 def sp13_line_to_survey_info(line):
     # read the proper columns
