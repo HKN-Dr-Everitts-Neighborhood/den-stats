@@ -7,6 +7,9 @@ from toolbox_parser import (
     attach_survey_info_fa12,
     attach_survey_info_sp13,
 )
+from google_docs_parser import (
+    google_docs_parser,
+)
 from summarize_data import summarize
 
 """
@@ -16,9 +19,6 @@ special cases here, because this is the designated dumping ground for
 the dirty logic.
 """
 
-def google_docs_parser(folder, files):
-    print "googleparse", files
-    return []
 
 
 # This dict tells us which parser to run for each folder (semester)
