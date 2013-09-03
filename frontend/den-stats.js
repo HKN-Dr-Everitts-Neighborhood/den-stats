@@ -1,7 +1,7 @@
 // This list is used to populate the semesters dropdown.
 var semesters = ["Spring 2013", "Fall 2012", "Spring 2012"];
 var data_location;
-if (is_dev)
+if (typeof(is_dev) !== "undefined" && is_dev)
   data_location ="/";
 else
   data_location = "/download/attachments/227740932/"; //retarget for development
