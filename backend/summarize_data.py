@@ -1,5 +1,6 @@
 from collections import Counter
 from random import shuffle
+import re
 
 # This module reads Survey objects (survey_obj.py) and outputs the summarized json
 # that the frontend uses to draw the graphs.
@@ -19,7 +20,6 @@ def summarize_one(survey):
         question_summary['prompt'] = q.question_text
         question_summary['type'] = q.type
         if q.options: # this covers single-choice and multi-choice
-            # TODO: output options that weren't chosen.
 
             counts = Counter(ans for r_num, ans, other in q.answers)
             question_summary['answers'] = [
@@ -34,7 +34,7 @@ def summarize_one(survey):
                 shuffle(others)
                 question_summary['others'] = others
         else: # this covers freeform questions
-            answers = [ ans for r_num, ans, other in q.answers if ans ]
+            answers = [ ans for r_num, ans, other in q.answers if accept(ans) ]
             # shuffle for anonymization
             shuffle(answers)
             question_summary['answers'] = answers
@@ -42,3 +42,20 @@ def summarize_one(survey):
         summary.append(question_summary)
 
     return summary
+
+def accept(ans):
+    # filter out empty string, None, and various forms of no / n/a.
+    real_answer = (ans and 
+                 not re.match(r'([Nn][Oo]([Pp][Ee])?)|([Nn]/[Aa])\.?!*', ans))
+    if real_answer:
+        # swear check.
+        has_swear = re.search(r'([Ff][Uu][Cc][Kk])|([Ss][Hh][Ii][Tt])', ans)
+        if has_swear and len(ans) < 20:
+            print "Ignoring swear answer:", ans
+            return False
+        elif has_swear:
+            print "Swear found, but allowed:", ans
+        else:
+            return True
+    else:
+        return False
