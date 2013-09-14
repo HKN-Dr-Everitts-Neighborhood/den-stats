@@ -100,7 +100,7 @@ def google_docs_parser(folder, files):
     surveys = []
     for f in files:
         if f.endswith('.csv') and '-' in f:
-            print "processing", f
+            print "Processing", f
             class_name = f.split('-')[1].strip().split('.')[0]
 
             with open(os.path.join(folder, f)) as csv_file:
@@ -164,7 +164,6 @@ def google_docs_parser(folder, files):
                             if answer in question.options:
                                 survey.add_answer(resp_num, q_num, answer)
                             else:
-                                print question.question_text, question.options, answer
                                 survey.add_answer(resp_num, q_num, Other, other=answer)
                         else:
                             survey.add_answer(resp_num, q_num, answer)

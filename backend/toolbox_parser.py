@@ -31,11 +31,15 @@ def toolbox_parser(folder, files, attach_survey_info, tech_electives_hack=False)
         survey = Survey()
 
         # parse the html file
-        with open(os.path.join(folder, title + ".html")) as html_file:
+        html_file_name = os.path.join(folder, title + ".html")
+        with open(html_file_name) as html_file:
+            print "Processing", html_file_name
             soup = BeautifulSoup(html_file)
         
         # parse the csv.
-        with open(os.path.join(folder, title + ".csv")) as csv_file:
+        csv_file_name = os.path.join(folder, title + ".csv")
+        with open(csv_file_name) as csv_file:
+            print "Processing", csv_file_name
             lines = [line for line in csv.reader(csv_file)]
 
         header = lines[0]
