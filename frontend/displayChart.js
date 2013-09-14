@@ -1,6 +1,6 @@
 var whiteRGB = "#000000";
 
-var cWidth = 780;
+var cWidth = 800;
 var cHeight = 350;
 
 var CanvasChart = function (canvasElem) {
