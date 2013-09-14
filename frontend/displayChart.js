@@ -73,7 +73,6 @@ function spawnCanvas(chartName, chartData) {
       // caching these canvases may be a good idea in the future,
       // but let's avoid premature optimization for now.
       var chart_canvas = new CanvasChart(newCanvas);
-      console.log("DATA:", chartData[i].data);
       chart_canvas.displayData(chartData[i].data);
     }
     if (chartData[i].others) {
