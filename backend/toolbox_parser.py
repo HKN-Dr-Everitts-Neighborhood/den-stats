@@ -1,4 +1,4 @@
-import csv, os.path
+import csv, os.path, re
 from bs4 import BeautifulSoup
 from collections import defaultdict
 
@@ -144,9 +144,16 @@ def toolbox_parser(folder, files, attach_survey_info, tech_electives_hack=False)
 
                 # copy all questions to the new survey
                 for q in survey.questions[1:]:
-                    sub_survey.add_question(q.copy())
+                    new_q = q.copy()
+                    # correct the question numbering
+                    new_q.question_text = re.sub(
+                        r'^\d+',
+                        lambda x: str(int(x.group(0))-1),
+                        new_q.question_text
+                    )
+                    sub_survey.add_question(new_q)
 
-                assert all(a.question_text == b.question_text for a,b in zip(survey.questions[1:], sub_survey.questions))
+                assert all(a.question_text.split('.', 1)[1] == b.question_text.split('.', 1)[1] for a,b in zip(survey.questions[1:], sub_survey.questions))
                 print "creating subsurvey for", option
                 sub_surveys_by_class[option] = sub_survey
 
@@ -162,7 +169,7 @@ def toolbox_parser(folder, files, attach_survey_info, tech_electives_hack=False)
 
                     # sanity check
                     new_q = sub_survey.get_question(i)
-                    assert q.question_text == new_q.question_text
+                    assert q.question_text.split('.',1)[1] == new_q.question_text.split('.', 1)[1]
 
                     # add answer.  Can't call add_answer() on new_q
                     # since that won't increment the survey's num_answers.
