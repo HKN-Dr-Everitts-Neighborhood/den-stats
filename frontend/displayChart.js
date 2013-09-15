@@ -48,7 +48,8 @@ CanvasChart.prototype.displayData = function (data) {
     scaleOverride: true,
     scaleSteps: steps,
     scaleStepWidth: step_size,
-    scaleStartValue: 0
+    scaleStartValue: 0,
+    animation: false,
   };
   this.chart.Bar(data, opts);
 };
