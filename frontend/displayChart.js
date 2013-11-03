@@ -1,7 +1,7 @@
 var whiteRGB = "#000000";
 
 var cWidth = 800;
-var cHeight = 350;
+var cHeight = 220;
 
 var CanvasChart = function (canvasElem) {
   this.canvas = canvasElem;
@@ -41,6 +41,14 @@ CanvasChart.prototype.displayData = function (data) {
     data.labels = new_labels;
   }
 
+  // A bunch of dirty hacks to make the labels shorter.
+  for (var i=0; i < data.labels.length; i++)
+    data.labels[i] = data.labels[i].replace('Engineering', 'Eng.')
+					   .replace('Environmental', 'Environ.')
+                                           .replace('and', '&')
+                                           .replace('Agricultural & Biological', 'Agr. & Bio.')
+				           .replace('(Grad Student)', '(Grad.)');
+  
   var step_size = Math.ceil(max/steps);
   // minimum step size of 1, just incase we have graph with no data.
   step_size = (step_size > 0) ? step_size : 1;
