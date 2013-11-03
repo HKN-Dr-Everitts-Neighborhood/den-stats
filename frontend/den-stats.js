@@ -18,6 +18,9 @@ var initFunc = function ()
 
 var semesterSelectionChanged = function() {
   var new_semester = $("#semester_select").val();
+  // kill all options in the class select - because otherwise we could choose something from
+  // the old semester while the json loads
+  $("#class_select").children().remove();
   if (new_semester) { // weed out "select a semester" option
     $.getJSON(data_location + new_semester + '.json', loadSemesterJson);
   }
