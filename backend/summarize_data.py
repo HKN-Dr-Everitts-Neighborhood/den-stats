@@ -55,6 +55,7 @@ def accept(ans):
             return False
         elif has_swear:
             print "Swear found, but allowed:", ans
+            return True
         else:
             return True
     else:
