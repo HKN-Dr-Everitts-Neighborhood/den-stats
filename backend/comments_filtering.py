@@ -21,6 +21,7 @@ def comments_to_csv(filename):
                 # single-choice / multi-choice answers
                 if question['type'] == "freeform":
                     for answer in question['answers']:
+                        # csv writer can't handle unicode.
                         csv_out.writerow([class_name, question['prompt'],
                                           unidecode(answer), ''])
 
@@ -31,8 +32,11 @@ def annotated_csv_and_json_to_new_json(json_filename, csv_filename):
         csv_data = [ row for row in csv.reader(csv_file) ]
 
     # reorganize csv_data into something more useful.
+    # NOTE: it turns out that google docs (or csv reader/writer... not totally
+    # sure) sometimes removes trailing whitespace from fields (particularly,
+    # from answer)
     yn_by_class_q_and_answer = dict(
-        ((class_name, question, answer), yn) for
+        ((class_name, question, answer.strip()), yn) for
             class_name, question, answer, yn in csv_data
     )
 
@@ -43,8 +47,10 @@ def annotated_csv_and_json_to_new_json(json_filename, csv_filename):
                 for answer in question['answers']:
                     # it turns out that some of the answers have \r\n in them, but setting
                     # lineterminator to \n when writing the csv doesn't preserve that.
+                    # also must unidecode here since comments_to_csv does it.
+                    sanitized_answer = unidecode(answer.replace('\r\n', '\n').strip())
                     yn = yn_by_class_q_and_answer[
-                        (class_name, question['prompt'], answer.replace('\r\n', '\n'))]
+                        (class_name, question['prompt'], sanitized_answer)]
                     assert yn in ('y', 'n'), "invalid y/n value: %s" % yn
                     if yn == 'y':
                         new_answers.append(answer)

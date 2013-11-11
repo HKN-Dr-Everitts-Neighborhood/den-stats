@@ -11,6 +11,7 @@ from google_docs_parser import (
     google_docs_parser,
 )
 from summarize_data import summarize
+from comments_filtering import comments_to_csv
 
 """
 The point of this script is to turn semester-specific data formats into
@@ -47,8 +48,11 @@ def main():
         # from that semester.
         surveys = semester_parser[folder](full_path, os.listdir(full_path))
 
-        with open(os.path.join('summarized_data', folder + '.json'), 'w') as f:
+        summary_json = os.path.join('summarized_data', folder + '.json')
+        print "writing to", summary_json
+        with open(summary_json, 'w') as f:
             f.write(json.dumps(summarize(surveys)))
+        comments_to_csv(summary_json)
 
 if __name__ == "__main__":
     main()
